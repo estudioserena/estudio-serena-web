@@ -74,12 +74,14 @@ export default function Hero() {
             >
               EXPLORAR ATMOS
             </Link>
-            <Link
-              href="#contacto"
+            <a
+              href="https://wa.me/56929603501?text=Hola%2C%20quiero%20agendar%20una%20sesi%C3%B3n%20en%20Estudio%20Serena"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-mono text-[9px] tracking-[0.12em] border border-crema/20 text-crema/70 px-6 py-3 hover:border-crema/40 transition-colors"
             >
               AGENDAR SESIÓN
-            </Link>
+            </a>
           </div>
         </motion.div>
 

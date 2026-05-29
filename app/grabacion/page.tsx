@@ -149,6 +149,15 @@ export default function GrabacionPage() {
             >
               AGENDAR POR WHATSAPP →
             </Link>
+            <div className="mt-4">
+              <a
+                href="/EstudioSerena_FichaTecnica_2026.pdf"
+                download
+                className="inline-block font-mono text-xs tracking-widest border border-white/20 text-white/60 px-8 py-4 hover:border-senal hover:text-senal transition-colors"
+              >
+                DESCARGAR FICHA TÉCNICA →
+              </a>
+            </div>
             <p className="font-dm text-[14px] font-light text-crema/45 leading-relaxed max-w-md mx-auto mt-10">
               Recibimos artistas de todo Chile. A pasos del centro de La Serena.
             </p>
