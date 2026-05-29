@@ -7,7 +7,7 @@ const links = [
   { label: "ATMOS", href: "/atmos" },
   { label: "SERVICIOS", href: "/servicios" },
   { label: "GRABACIÓN", href: "/grabacion" },
-  { label: "BLOG", href: null },
+  { label: "BLOG", href: "/blog" },
 ];
 
 export default function Nav() {

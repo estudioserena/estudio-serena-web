@@ -17,7 +17,8 @@
       "Bash(gh --version)",
       "Bash(gh auth *)",
       "Bash(brew --version)",
-      "Bash(gh repo *)"
+      "Bash(gh repo *)",
+      "Bash(npm install *)"
     ]
   }
 }
