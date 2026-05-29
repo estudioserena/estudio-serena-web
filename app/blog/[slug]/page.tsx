@@ -112,7 +112,7 @@ export default async function PostPage({
 
       {/* Cuerpo MDX */}
       <article className="w-full border-t border-crema/[0.06]">
-        <div className="max-w-[720px] mx-auto px-6 py-16">
+        <div className="blog-content max-w-[720px] mx-auto px-6 py-16 text-justify">
           <MDXRemote source={post.content} components={mdxComponents} />
         </div>
       </article>

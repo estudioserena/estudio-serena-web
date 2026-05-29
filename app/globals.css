@@ -35,6 +35,11 @@ body {
   background-size: 128px 128px;
 }
 
+/* Blog article body */
+.blog-content p {
+  text-align: justify;
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
