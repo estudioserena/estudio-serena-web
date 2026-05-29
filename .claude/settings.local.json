@@ -3,7 +3,17 @@
     "allow": [
       "Bash(mv CLAUDE.md /tmp/CLAUDE.md.bak)",
       "Bash(mv public:*)",
-      "Bash(npx create-next-app@latest . --typescript --tailwind --app --no-src-dir --import-alias \"@/*\" --eslint --use-npm)"
+      "Bash(npx create-next-app@latest . --typescript --tailwind --app --no-src-dir --import-alias \"@/*\" --eslint --use-npm)",
+      "Bash(npx next:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://localhost:3000)",
+      "Bash(python3 -)",
+      "Bash(cp \"/Volumes/ESTUDIO SERENA/CLAUDE/WEB/FOTOS ESTUDIO 2026/cabina acustica 1.JPG\" public/fotos/cabina_1.jpg)",
+      "Bash(cp \"/Volumes/ESTUDIO SERENA/CLAUDE/WEB/FOTOS ESTUDIO 2026/cabina acustica 2.JPG\" public/fotos/cabina_2.jpg)",
+      "Bash(cp \"/Volumes/ESTUDIO SERENA/CLAUDE/WEB/FOTOS ESTUDIO 2026/cabina acustica 3.jpeg\" public/fotos/cabina_3.jpg)",
+      "Bash(grep -rn \"process.env\" app components)",
+      "Bash(ls -la .env*)",
+      "Bash(npm run *)"
     ]
   }
 }
