@@ -13,7 +13,11 @@
       "Bash(cp \"/Volumes/ESTUDIO SERENA/CLAUDE/WEB/FOTOS ESTUDIO 2026/cabina acustica 3.jpeg\" public/fotos/cabina_3.jpg)",
       "Bash(grep -rn \"process.env\" app components)",
       "Bash(ls -la .env*)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(gh --version)",
+      "Bash(gh auth *)",
+      "Bash(brew --version)",
+      "Bash(gh repo *)"
     ]
   }
 }
