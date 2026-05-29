@@ -53,12 +53,14 @@ export default function Nav() {
 
           {/* CTA + Mobile toggle */}
           <div className="flex items-center gap-4">
-            <Link
-              href="#contacto"
+            <a
+              href="https://wa.me/56929603501?text=Hola%2C%20quiero%20agendar%20una%20sesi%C3%B3n%20en%20Estudio%20Serena"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden md:inline-flex font-mono text-[9px] tracking-[0.12em] bg-senal text-white px-4 py-2 hover:bg-senal/90 transition-colors"
             >
               AGENDAR →
-            </Link>
+            </a>
             <button
               onClick={() => setOpen(!open)}
               className="md:hidden text-crema p-1"
@@ -98,13 +100,15 @@ export default function Nav() {
               </span>
             )
           )}
-          <Link
-            href="#contacto"
+          <a
+            href="https://wa.me/56929603501?text=Hola%2C%20quiero%20agendar%20una%20sesi%C3%B3n%20en%20Estudio%20Serena"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setOpen(false)}
             className="font-mono text-[11px] tracking-[0.12em] bg-senal text-white px-6 py-3 mt-4"
           >
             AGENDAR →
-          </Link>
+          </a>
         </div>
       )}
     </>

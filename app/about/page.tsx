@@ -111,31 +111,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Ficha técnica */}
-      <section className="w-full border-t border-crema/[0.06]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-16 py-20 text-center">
-          <FadeUp>
-            <p className="font-mono text-sm tracking-widest text-senal font-medium mb-4">
-              — FICHA TÉCNICA
-            </p>
-            <h2 className="font-syne text-4xl md:text-5xl lg:text-6xl font-bold text-crema/[0.82] leading-tight mb-6">
-              Especificaciones técnicas completas
-            </h2>
-            <p className="font-dm text-[15px] font-light text-crema/55 leading-relaxed max-w-xl mx-auto mb-10">
-              Descarga la ficha técnica completa del estudio: equipamiento, configuración 7.1.4,
-              tratamiento acústico y especificaciones de monitoreo.
-            </p>
-            <a
-              href="/EstudioSerena_FichaTecnica_2026.pdf"
-              download
-              className="inline-block font-mono text-[11px] tracking-[0.12em] bg-senal text-white px-8 py-4 hover:shadow-[0_0_24px_rgba(74,124,246,0.25)] transition-shadow"
-            >
-              DESCARGAR FICHA TÉCNICA →
-            </a>
-          </FadeUp>
-        </div>
-      </section>
-
       {/* Contacto */}
       <section className="w-full border-t border-crema/[0.06]">
         <div className="max-w-7xl mx-auto px-6 lg:px-16 py-20 text-center">
@@ -168,6 +143,31 @@ export default function AboutPage() {
               </Link>
               <p className="font-dm text-[16px] font-light text-crema/40">La Serena, Chile</p>
             </div>
+          </FadeUp>
+        </div>
+      </section>
+
+      {/* Documentación — Ficha técnica descargable */}
+      <section className="w-full py-16 px-6" style={{ backgroundColor: "#0D1A36" }}>
+        <div className="max-w-4xl mx-auto text-center">
+          <FadeUp>
+            <p className="font-mono text-sm tracking-widest text-senal font-medium mb-4">
+              — DOCUMENTACIÓN
+            </p>
+            <h2 className="font-syne text-4xl md:text-5xl lg:text-6xl font-extrabold text-crema/[0.82] leading-tight mb-6">
+              Especificaciones técnicas completas
+            </h2>
+            <p className="font-dm text-[15px] font-light text-crema/55 leading-relaxed max-w-xl mx-auto mb-10">
+              Descarga la ficha técnica del estudio con toda la información de equipamiento,
+              credenciales y créditos verificados.
+            </p>
+            <a
+              href="/EstudioSerena_FichaTecnica_2026.pdf"
+              download
+              className="inline-block font-mono text-[12px] tracking-[0.14em] bg-senal text-white px-10 py-5 hover:shadow-[0_0_24px_rgba(74,124,246,0.25)] transition-shadow"
+            >
+              DESCARGAR FICHA TÉCNICA →
+            </a>
           </FadeUp>
         </div>
       </section>
