@@ -15,8 +15,10 @@ export default function AtmosForm() {
 
     const form = e.currentTarget;
     const data = new FormData(form);
+    const now = new Date();
+    const fecha = `${String(now.getDate()).padStart(2, "0")}-${String(now.getMonth() + 1).padStart(2, "0")}-${now.getFullYear()}`;
     const payload = {
-      fecha: new Date().toISOString(),
+      fecha,
       nombre: String(data.get("nombre") ?? ""),
       artista: String(data.get("artista") ?? ""),
       cantidad_stems: String(data.get("cantidad_stems") ?? ""),
