@@ -5,6 +5,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Credits from "@/components/Credits";
 import FadeUp from "@/components/FadeUp";
+import AtmosForm from "@/components/AtmosForm";
 
 export const metadata: Metadata = {
   title: "Dolby Atmos Music — Estudio Serena",
@@ -213,43 +214,7 @@ export default function AtmosPage() {
           </FadeUp>
 
           <FadeUp delay={0.1}>
-            <form
-              action="https://formsubmit.co/infoestudioserena@gmail.com"
-              method="POST"
-              className="flex flex-col gap-4"
-            >
-              <input type="hidden" name="_subject" value="Nueva cotización Dolby Atmos — estudioserena.cl" />
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="text" name="_honey" style={{ display: "none" }} />
-
-              <Field name="Nombre" placeholder="Nombre" required />
-              <Field name="Artista o Sello" placeholder="Artista o Sello" required />
-              <Field name="Cantidad de temas" placeholder="Cantidad de temas" type="number" required />
-              <Field
-                name="Cantidad de stems de tu mezcla"
-                placeholder="Cantidad de stems de tu mezcla"
-                type="number"
-                required
-              />
-              <p className="font-mono text-[10px] tracking-[0.06em] text-senal/50 leading-relaxed -mt-1">
-                Formato requerido: stems en .wav 48kHz / 24 bits + mezcla estéreo de referencia.
-              </p>
-
-              <textarea
-                name="Mensaje"
-                placeholder="Mensaje"
-                rows={4}
-                required
-                className="bg-medianoche border border-crema/10 text-crema/80 font-dm text-[14px] px-4 py-3 focus:border-senal focus:outline-none transition-colors resize-none"
-              />
-
-              <button
-                type="submit"
-                className="font-mono text-[10px] tracking-[0.12em] bg-senal text-white px-6 py-3.5 mt-2 hover:shadow-[0_0_24px_rgba(74,124,246,0.25)] transition-shadow self-start"
-              >
-                ENVIAR COTIZACIÓN →
-              </button>
-            </form>
+            <AtmosForm />
           </FadeUp>
 
           <FadeUp delay={0.2}>
@@ -271,27 +236,5 @@ export default function AtmosPage() {
 
       <Footer />
     </>
-  );
-}
-
-function Field({
-  name,
-  placeholder,
-  type = "text",
-  required = false,
-}: {
-  name: string;
-  placeholder: string;
-  type?: string;
-  required?: boolean;
-}) {
-  return (
-    <input
-      type={type}
-      name={name}
-      placeholder={placeholder}
-      required={required}
-      className="bg-medianoche border border-crema/10 text-crema/80 font-dm text-[14px] px-4 py-3 focus:border-senal focus:outline-none transition-colors"
-    />
   );
 }
