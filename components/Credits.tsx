@@ -12,9 +12,20 @@ interface Credit {
   appleId: string;
   trackId: string;
   link: string;
+  image?: string;
 }
 
 const credits: Credit[] = [
+  {
+    artist: "Esteban Hurtado y Mikel Ramone",
+    title: '"Sin Conexión"',
+    type: "SINGLE",
+    year: "2026",
+    appleId: "6773363852",
+    trackId: "6773363854",
+    link: "https://music.apple.com/cl/album/sin-conexi%C3%B3n/6773363852?i=6773363854",
+    image: "/portada_Esteban_Hurtado.png",
+  },
   {
     artist: "Saiko",
     title: '"Romance"',
@@ -89,7 +100,7 @@ export default function Credits() {
   }, [next]);
 
   const c = credits[current];
-  const artUrl = artworks[c.appleId] ?? null;
+  const artUrl = c.image ?? artworks[c.appleId] ?? null;
 
   return (
     <section className="w-full border-t border-crema/[0.06]">

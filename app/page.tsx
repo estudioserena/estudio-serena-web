@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import LogoMarquee from "@/components/LogoMarquee";
 import Mission from "@/components/Mission";
 import Services from "@/components/Services";
+import EscuchasInmersivas from "@/components/EscuchasInmersivas";
 import Credits from "@/components/Credits";
 import About from "@/components/About";
 import Studio from "@/components/Studio";
@@ -16,6 +17,7 @@ export default function Home() {
       <LogoMarquee />
       <Mission />
       <Services />
+      <EscuchasInmersivas />
       <Credits />
       <About />
       <Studio />
