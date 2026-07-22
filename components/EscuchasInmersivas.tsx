@@ -1,6 +1,30 @@
 import Image from "next/image";
 import FadeUp from "./FadeUp";
 
+const sesiones = [
+  {
+    src: "/escuchas-inmersivas-abbey-road.png",
+    alt: "Abbey Road · Escuchas Inmersivas en Estudio Serena",
+    titulo: "Abbey Road",
+    meta: "The Beatles · Dolby Atmos",
+    link: "https://www.portaldisc.com/evento/abbeyroad2",
+  },
+  {
+    src: "/escuchas-inmersivas-thriller.png",
+    alt: "Thriller · Escuchas Inmersivas en Estudio Serena",
+    titulo: "Thriller",
+    meta: "Michael Jackson · Dolby Atmos",
+    link: "https://www.portaldisc.com/evento/thriller",
+  },
+  {
+    src: "/escuchas-inmersivas-the-overview.png",
+    alt: "The Overview · Escuchas Inmersivas en Estudio Serena",
+    titulo: "The Overview",
+    meta: "Steven Wilson · Dolby Atmos",
+    link: "https://www.portaldisc.com/evento/theoverview",
+  },
+];
+
 export default function EscuchasInmersivas() {
   return (
     <section className="w-full border-b border-crema/[0.06]">
@@ -20,39 +44,37 @@ export default function EscuchasInmersivas() {
           </p>
         </FadeUp>
 
-        <FadeUp delay={0.1}>
-          <div className="bg-medianoche border-t-2 border-senal max-w-2xl mx-auto p-8 md:p-12 text-center">
-            <Image
-              src="/escuchas-inmersivas-dark-side.png"
-              width={600}
-              height={800}
-              className="w-full object-cover mb-8"
-              alt="The Dark Side of the Moon · Escuchas Inmersivas en Estudio Serena"
-            />
-            <h3 className="font-syne text-2xl md:text-3xl font-extrabold text-crema leading-tight mb-3">
-              The Dark Side of the Moon
-            </h3>
-            <p className="font-mono text-[11px] tracking-[0.12em] text-senal mb-6">
-              Pink Floyd · Dolby Atmos · 50th Anniversary
-            </p>
-            <p className="font-dm text-base font-light text-crema/70 mb-10">
-              Sábado 11 de julio
-            </p>
-
-            <a
-              href="https://www.portaldisc.com/evento/darksideofthemoon"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block font-syne text-sm font-bold tracking-wide bg-senal text-crema px-10 py-4 hover:shadow-[0_0_24px_rgba(74,124,246,0.25)] transition-shadow"
-            >
-              Comprar entradas
-            </a>
-
-            <p className="font-mono text-[10px] tracking-[0.08em] text-crema/60 leading-relaxed mt-6">
-              $13.000 CLP · Cargo incluido · 18:00 y 19:30 hrs
-            </p>
-          </div>
-        </FadeUp>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {sesiones.map((sesion, i) => (
+            <FadeUp key={sesion.titulo} delay={i * 0.1}>
+              <div className="bg-medianoche border-t-2 border-senal p-6 md:p-8 text-center h-full flex flex-col">
+                <Image
+                  src={sesion.src}
+                  width={600}
+                  height={800}
+                  className="w-full object-cover mb-6"
+                  alt={sesion.alt}
+                />
+                <h3 className="font-syne text-xl md:text-2xl font-extrabold text-crema leading-tight mb-2">
+                  {sesion.titulo}
+                </h3>
+                <p className="font-mono text-[11px] tracking-[0.12em] text-senal mb-6">
+                  {sesion.meta}
+                </p>
+                <div className="mt-auto">
+                  <a
+                    href={sesion.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block font-syne text-sm font-bold tracking-wide bg-senal text-crema px-8 py-3 hover:shadow-[0_0_24px_rgba(74,124,246,0.25)] transition-shadow"
+                  >
+                    Comprar entradas
+                  </a>
+                </div>
+              </div>
+            </FadeUp>
+          ))}
+        </div>
       </div>
     </section>
   );
