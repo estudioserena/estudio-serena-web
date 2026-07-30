@@ -21,15 +21,13 @@ export default function About() {
               Mauricio Flores
             </h3>
             <p className="font-mono text-sm md:text-base tracking-widest font-medium text-senal leading-relaxed mb-4">
-              GUITARRISTA · BAJISTA · PRODUCTOR MUSICAL · DISEÑADOR SONORO · DOLBY ATMOS MIXER
+              ARQUITECTO · MÚSICO · PRODUCTOR MUSICAL · DOLBY ATMOS MIXER
             </p>
             <p className="font-dm text-[14px] font-light text-crema/[0.52] leading-relaxed max-w-lg text-justify">
-              Más de 20 años de trayectoria en la música independiente como
-              guitarrista, bajista, productor musical y diseñador sonoro para
-              teatro. Dolby Atmos Mixer avalado por el Dolby Institute. Director
-              del único estudio listado en el Dolby Atmos Music Directory en la
-              Región de Coquimbo. Créditos verificados en Apple Music Spatial
-              Audio.
+              El sonido no solo se escucha, se habita. Esa es mi visión: diseñar
+              experiencias donde el espacio, la música y la tecnología se
+              encuentran. Mi propósito es convertir Estudio Serena en un centro
+              de innovación sonora para y desde la Región de Coquimbo.
             </p>
           </div>
         </FadeUp>
