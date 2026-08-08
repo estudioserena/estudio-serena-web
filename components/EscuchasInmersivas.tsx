@@ -9,10 +9,6 @@ const sesiones = [
     meta: "Pink Floyd · Dolby Atmos",
     botones: [
       {
-        texto: "Viernes 7 · 19:00 hrs",
-        link: "https://www.portaldisc.com/evento/darksideofthemoon7agosto",
-      },
-      {
         texto: "Sábado 8 · 18:00 hrs",
         link: "https://www.portaldisc.com/evento/darksideofthemoon8agosto",
       },
@@ -24,10 +20,6 @@ const sesiones = [
     titulo: "Live at Pompeii",
     meta: "Pink Floyd · Dolby Atmos",
     botones: [
-      {
-        texto: "Viernes 7 · 20:30 hrs",
-        link: "https://www.portaldisc.com/evento/liveatpompeii7agosto",
-      },
       {
         texto: "Sábado 8 · 19:30 hrs",
         link: "https://www.portaldisc.com/evento/liveatpompeii8agosto",
