@@ -6,7 +6,7 @@ const sesiones = [
     src: "/escuchas-inmersivas-queen.png",
     alt: "Queen · Escuchas Inmersivas en Estudio Serena",
     titulo: "Queen",
-    meta: "Dolby Atmos",
+    meta: "Playlist Especial · Dolby Atmos",
     botones: [
       {
         texto: "Viernes 21 Agosto · 19:00 hrs",
@@ -82,7 +82,7 @@ export default function EscuchasInmersivas() {
                   className="w-full object-cover mb-6"
                   alt={sesion.alt}
                 />
-                <h3 className="font-syne text-xl md:text-2xl font-extrabold text-crema leading-tight mb-2">
+                <h3 className="font-syne text-lg md:text-xl lg:text-sm font-extrabold text-crema leading-tight mb-2 line-clamp-2 min-h-[2.6em]">
                   {sesion.titulo}
                 </h3>
                 <p className="font-mono text-[11px] tracking-[0.12em] text-senal mb-6">
