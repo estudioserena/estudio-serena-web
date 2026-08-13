@@ -3,26 +3,50 @@ import FadeUp from "./FadeUp";
 
 const sesiones = [
   {
-    src: "/escuchas-inmersivas-dark-side-agosto.png",
-    alt: "The Dark Side of the Moon · Escuchas Inmersivas en Estudio Serena",
-    titulo: "The Dark Side of the Moon",
-    meta: "Pink Floyd · Dolby Atmos",
+    src: "/escuchas-inmersivas-queen.png",
+    alt: "Queen · Escuchas Inmersivas en Estudio Serena",
+    titulo: "Queen",
+    meta: "Dolby Atmos",
     botones: [
       {
-        texto: "Sábado 8 · 18:00 hrs",
-        link: "https://www.portaldisc.com/evento/darksideofthemoon8agosto",
+        texto: "Viernes 21 Agosto · 19:00 hrs",
+        link: "https://www.portaldisc.com/evento/queen21agosto",
       },
     ],
   },
   {
-    src: "/escuchas-inmersivas-live-at-pompeii.png",
-    alt: "Live at Pompeii · Escuchas Inmersivas en Estudio Serena",
-    titulo: "Live at Pompeii",
-    meta: "Pink Floyd · Dolby Atmos",
+    src: "/escuchas-inmersivas-daft-punk.png",
+    alt: "Random Access Memories · Escuchas Inmersivas en Estudio Serena",
+    titulo: "Random Access Memories",
+    meta: "Daft Punk · Dolby Atmos",
     botones: [
       {
-        texto: "Sábado 8 · 19:30 hrs",
-        link: "https://www.portaldisc.com/evento/liveatpompeii8agosto",
+        texto: "Viernes 21 Agosto · 20:30 hrs",
+        link: "https://www.portaldisc.com/evento/daftpunk21agosto",
+      },
+    ],
+  },
+  {
+    src: "/escuchas-inmersivas-rush.png",
+    alt: "Moving Pictures · Escuchas Inmersivas en Estudio Serena",
+    titulo: "Moving Pictures",
+    meta: "Rush · Dolby Atmos",
+    botones: [
+      {
+        texto: "Sábado 22 Agosto · 18:00 hrs",
+        link: "https://www.portaldisc.com/evento/movingpictures22agosto",
+      },
+    ],
+  },
+  {
+    src: "/escuchas-inmersivas-dream-theater.png",
+    alt: "Parasomnia · Escuchas Inmersivas en Estudio Serena",
+    titulo: "Parasomnia",
+    meta: "Dream Theater · Dolby Atmos",
+    botones: [
+      {
+        texto: "Sábado 22 Agosto · 19:30 hrs",
+        link: "https://www.portaldisc.com/evento/parasomnia22agosto",
       },
     ],
   },
@@ -47,7 +71,7 @@ export default function EscuchasInmersivas() {
           </p>
         </FadeUp>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {sesiones.map((sesion, i) => (
             <FadeUp key={sesion.titulo} delay={i * 0.1}>
               <div className="bg-medianoche border-t-2 border-senal p-6 md:p-8 text-center h-full flex flex-col">
