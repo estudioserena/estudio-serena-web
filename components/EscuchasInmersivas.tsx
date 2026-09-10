@@ -1,56 +1,18 @@
 import Image from "next/image";
 import FadeUp from "./FadeUp";
 
-const sesiones = [
-  {
-    src: "/escuchas-inmersivas-queen.png",
-    alt: "Queen · Escuchas Inmersivas en Estudio Serena",
-    titulo: "Queen",
-    meta: "Playlist Especial · Dolby Atmos",
-    botones: [
-      {
-        texto: "Viernes 21 Agosto · 19:00 hrs",
-        link: "https://www.portaldisc.com/evento/queen21agosto",
-      },
-    ],
-  },
-  {
-    src: "/escuchas-inmersivas-daft-punk.png",
-    alt: "Random Access Memories · Escuchas Inmersivas en Estudio Serena",
-    titulo: "Random Access Memories",
-    meta: "Daft Punk · Dolby Atmos",
-    botones: [
-      {
-        texto: "Viernes 21 Agosto · 20:30 hrs",
-        link: "https://www.portaldisc.com/evento/daftpunk21agosto",
-      },
-    ],
-  },
-  {
-    src: "/escuchas-inmersivas-rush.png",
-    alt: "Moving Pictures · Escuchas Inmersivas en Estudio Serena",
-    titulo: "Moving Pictures",
-    meta: "Rush · Dolby Atmos",
-    botones: [
-      {
-        texto: "Sábado 22 Agosto · 18:00 hrs",
-        link: "https://www.portaldisc.com/evento/movingpictures22agosto",
-      },
-    ],
-  },
-  {
-    src: "/escuchas-inmersivas-dream-theater.png",
-    alt: "Parasomnia · Escuchas Inmersivas en Estudio Serena",
-    titulo: "Parasomnia",
-    meta: "Dream Theater · Dolby Atmos",
-    botones: [
-      {
-        texto: "Sábado 22 Agosto · 19:30 hrs",
-        link: "https://www.portaldisc.com/evento/parasomnia22agosto",
-      },
-    ],
-  },
-];
+const sesion = {
+  src: "/escuchas-inmersivas-ado.png",
+  alt: "Playlist Especial — Ado · Escuchas Inmersivas en Estudio Serena",
+  titulo: "Playlist Especial — Ado",
+  meta: "Dolby Atmos",
+  botones: [
+    {
+      texto: "Sábado 12 de Septiembre · 18:00 hrs",
+      link: "https://www.portaldisc.com/evento/adodolbyatmos12septiembre",
+    },
+  ],
+};
 
 export default function EscuchasInmersivas() {
   return (
@@ -71,39 +33,37 @@ export default function EscuchasInmersivas() {
           </p>
         </FadeUp>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          {sesiones.map((sesion, i) => (
-            <FadeUp key={sesion.titulo} delay={i * 0.1}>
-              <div className="bg-medianoche border-t-2 border-senal p-6 md:p-8 text-center h-full flex flex-col">
-                <Image
-                  src={sesion.src}
-                  width={600}
-                  height={800}
-                  className="w-full object-cover mb-6"
-                  alt={sesion.alt}
-                />
-                <h3 className="font-syne text-lg md:text-xl lg:text-sm font-extrabold text-crema leading-tight mb-2 line-clamp-2 min-h-[2.6em]">
-                  {sesion.titulo}
-                </h3>
-                <p className="font-mono text-[11px] tracking-[0.12em] text-senal mb-6">
-                  {sesion.meta}
-                </p>
-                <div className="mt-auto flex flex-col sm:flex-row gap-3 justify-center">
-                  {sesion.botones.map((boton) => (
-                    <a
-                      key={boton.texto}
-                      href={boton.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 inline-block font-syne text-sm font-bold tracking-wide bg-senal text-crema px-6 py-3 hover:shadow-[0_0_24px_rgba(74,124,246,0.25)] transition-shadow"
-                    >
-                      {boton.texto}
-                    </a>
-                  ))}
-                </div>
+        <div className="grid grid-cols-1 max-w-sm mx-auto">
+          <FadeUp key={sesion.titulo}>
+            <div className="bg-medianoche border-t-2 border-senal p-6 md:p-8 text-center h-full flex flex-col">
+              <Image
+                src={sesion.src}
+                width={600}
+                height={800}
+                className="w-full object-cover mb-6"
+                alt={sesion.alt}
+              />
+              <h3 className="font-syne text-lg md:text-xl lg:text-sm font-extrabold text-crema leading-tight mb-2 line-clamp-2 min-h-[2.6em]">
+                {sesion.titulo}
+              </h3>
+              <p className="font-mono text-[11px] tracking-[0.12em] text-senal mb-6">
+                {sesion.meta}
+              </p>
+              <div className="mt-auto flex flex-col sm:flex-row gap-3 justify-center">
+                {sesion.botones.map((boton) => (
+                  <a
+                    key={boton.texto}
+                    href={boton.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 inline-block font-syne text-sm font-bold tracking-wide bg-senal text-crema px-6 py-3 hover:shadow-[0_0_24px_rgba(74,124,246,0.25)] transition-shadow"
+                  >
+                    {boton.texto}
+                  </a>
+                ))}
               </div>
-            </FadeUp>
-          ))}
+            </div>
+          </FadeUp>
         </div>
       </div>
     </section>
