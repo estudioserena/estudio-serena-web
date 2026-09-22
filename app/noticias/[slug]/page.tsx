@@ -37,10 +37,10 @@ function MdxImage({ alt, ...props }: React.ImgHTMLAttributes<HTMLImageElement>) 
 
 const mdxComponents = {
   h2: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h2 className="font-syne text-2xl md:text-3xl font-extrabold text-crema leading-tight mt-12 mb-5" {...props} />
+    <h2 className="font-syne text-2xl md:text-3xl font-extrabold text-crema leading-tight text-left mt-12 mb-5" {...props} />
   ),
   h3: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h3 className="font-syne text-xl font-extrabold text-crema leading-tight mt-8 mb-4" {...props} />
+    <h3 className="font-syne text-xl font-extrabold text-crema leading-tight text-left mt-8 mb-4" {...props} />
   ),
   p: ({ children, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => {
     const childArray = Children.toArray(children);
@@ -130,7 +130,7 @@ export default async function NoticiaPage({
               Estudio Serena
             </span>
             <span className="font-mono text-[10px] tracking-[0.1em] text-crema/30">
-              {formatDate(noticia.date)} · {noticia.readTime} DE LECTURA
+              {formatDate(noticia.date)}
             </span>
           </div>
         </div>

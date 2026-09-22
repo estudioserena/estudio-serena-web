@@ -11,7 +11,6 @@ export interface Noticia {
   author: string
   category: string
   excerpt: string
-  readTime: string
   content: string
 }
 

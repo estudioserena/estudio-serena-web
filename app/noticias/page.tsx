@@ -70,9 +70,6 @@ export default function NoticiasPage() {
                       <span className="font-mono text-[9px] tracking-[0.1em] text-crema/30">
                         {formatDate(noticia.date)}
                       </span>
-                      <span className="font-mono text-[9px] tracking-[0.1em] text-crema/30">
-                        {noticia.readTime} DE LECTURA
-                      </span>
                     </div>
                     <h2 className="font-syne text-2xl md:text-3xl font-extrabold text-crema leading-tight mb-4 group-hover:text-crema/90 transition-colors">
                       {noticia.title}
