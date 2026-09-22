@@ -72,7 +72,7 @@ export async function generateMetadata({
       url,
       type: "article",
       publishedTime: noticia.date,
-      authors: [noticia.author],
+      authors: ["Estudio Serena"],
     },
   };
 }
@@ -101,7 +101,7 @@ export default async function NoticiaPage({
           </h1>
           <div className="flex flex-wrap items-center gap-4">
             <span className="font-mono text-[10px] tracking-[0.1em] text-crema/50">
-              {noticia.author}
+              Estudio Serena
             </span>
             <span className="font-mono text-[10px] tracking-[0.1em] text-crema/30">
               {formatDate(noticia.date)} · {noticia.readTime} DE LECTURA

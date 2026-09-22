@@ -7,6 +7,7 @@ const links = [
   { label: "ATMOS", href: "/atmos" },
   { label: "SERVICIOS", href: "/servicios" },
   { label: "GRABACIÓN", href: "/grabacion" },
+  { label: "ESCUCHAS", href: "/escuchasinmersivas" },
   { label: "BLOG", href: "/blog" },
   { label: "NOTICIAS", href: "/noticias" },
 ];
