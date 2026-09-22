@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Escuchas Inmersivas — Estudio Serena | Dolby Atmos",
     description:
       "Sesiones de escucha de discos completos en Dolby Atmos 7.1.4. Sala semi-oscura. 6 sillas. Experiencia única en la Región de Coquimbo.",
-    images: ["/escuchas-inmersivas-ado.png"],
+    images: ["/fotos/hero.jpg"],
     url: "https://www.estudioserena.cl/escuchasinmersivas",
     type: "website",
   },

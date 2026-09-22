@@ -1,5 +1,6 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
+import NoticiasTeaser from "@/components/NoticiasTeaser";
 import LogoMarquee from "@/components/LogoMarquee";
 import Mission from "@/components/Mission";
 import Services from "@/components/Services";
@@ -14,6 +15,7 @@ export default function Home() {
     <>
       <Nav />
       <Hero />
+      <NoticiasTeaser />
       <LogoMarquee />
       <Mission />
       <Services />

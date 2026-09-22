@@ -1,18 +1,4 @@
-import Image from "next/image";
 import FadeUp from "./FadeUp";
-
-const sesion = {
-  src: "/escuchas-inmersivas-ado.png",
-  alt: "Playlist Especial — Ado · Escuchas Inmersivas en Estudio Serena",
-  titulo: "Playlist Especial — Ado",
-  meta: "Dolby Atmos",
-  botones: [
-    {
-      texto: "Sábado 12 de Septiembre · 18:00 hrs",
-      link: "https://www.portaldisc.com/evento/adodolbyatmos12septiembre",
-    },
-  ],
-};
 
 export default function EscuchasInmersivas() {
   return (
@@ -34,34 +20,14 @@ export default function EscuchasInmersivas() {
         </FadeUp>
 
         <div className="grid grid-cols-1 max-w-sm mx-auto">
-          <FadeUp key={sesion.titulo}>
-            <div className="bg-medianoche border-t-2 border-senal p-6 md:p-8 text-center h-full flex flex-col">
-              <Image
-                src={sesion.src}
-                width={600}
-                height={800}
-                className="w-full object-cover mb-6"
-                alt={sesion.alt}
-              />
-              <h3 className="font-syne text-lg md:text-xl lg:text-sm font-extrabold text-crema leading-tight mb-2 line-clamp-2 min-h-[2.6em]">
-                {sesion.titulo}
-              </h3>
-              <p className="font-mono text-[11px] tracking-[0.12em] text-senal mb-6">
-                {sesion.meta}
+          <FadeUp>
+            <div className="bg-medianoche border-t-2 border-senal p-10 text-center flex flex-col items-center gap-3">
+              <span className="font-mono text-[10px] tracking-[0.14em] text-senal">
+                PRÓXIMAS FECHAS
+              </span>
+              <p className="font-dm text-[15px] font-light text-crema/60">
+                Muy pronto anunciaremos nuevas sesiones de escucha inmersiva.
               </p>
-              <div className="mt-auto flex flex-col sm:flex-row gap-3 justify-center">
-                {sesion.botones.map((boton) => (
-                  <a
-                    key={boton.texto}
-                    href={boton.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 inline-block font-syne text-sm font-bold tracking-wide bg-senal text-crema px-6 py-3 hover:shadow-[0_0_24px_rgba(74,124,246,0.25)] transition-shadow"
-                  >
-                    {boton.texto}
-                  </a>
-                ))}
-              </div>
             </div>
           </FadeUp>
         </div>

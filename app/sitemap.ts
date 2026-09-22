@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { getAllPosts } from '@/lib/blog'
+import { getAllNoticias } from '@/lib/noticias'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://www.estudioserena.cl'
@@ -11,6 +12,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
 
+  const noticias: MetadataRoute.Sitemap = getAllNoticias().map((noticia) => ({
+    url: `${base}/noticias/${noticia.slug}`,
+    lastModified: new Date(noticia.date),
+    changeFrequency: 'monthly',
+    priority: 0.6,
+  }))
+
   return [
     { url: base, lastModified: new Date(), changeFrequency: 'monthly', priority: 1 },
     { url: `${base}/atmos`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
@@ -18,6 +26,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/grabacion`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/about`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/blog`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${base}/noticias`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
     ...posts,
+    ...noticias,
   ]
 }
