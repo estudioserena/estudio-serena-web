@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Children, isValidElement } from "react";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Nav from "@/components/Nav";
@@ -20,6 +21,20 @@ function formatDate(date: string) {
   }).format(new Date(date));
 }
 
+function MdxImage({ alt, ...props }: React.ImgHTMLAttributes<HTMLImageElement>) {
+  return (
+    <figure className="my-10 -mx-6 md:mx-0">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img alt={alt} className="w-full h-auto" {...props} />
+      {alt && (
+        <figcaption className="font-mono text-[10px] tracking-[0.12em] text-crema/40 mt-3 text-center px-6 md:px-0">
+          {alt}
+        </figcaption>
+      )}
+    </figure>
+  );
+}
+
 const mdxComponents = {
   h2: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h2 className="font-syne text-2xl md:text-3xl font-extrabold text-crema leading-tight mt-12 mb-5" {...props} />
@@ -27,12 +42,23 @@ const mdxComponents = {
   h3: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h3 className="font-syne text-xl font-extrabold text-crema leading-tight mt-8 mb-4" {...props} />
   ),
-  p: (props: React.HTMLAttributes<HTMLParagraphElement>) => (
-    <p className="font-dm text-[17px] font-light leading-[1.8] text-crema/85 mb-6" {...props} />
-  ),
+  p: ({ children, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => {
+    const childArray = Children.toArray(children);
+    const isImageOnly =
+      childArray.length === 1 &&
+      isValidElement(childArray[0]) &&
+      childArray[0].type === MdxImage;
+    if (isImageOnly) return <>{children}</>;
+    return (
+      <p className="font-dm text-[17px] font-light leading-[1.8] text-crema/85 mb-6" {...props}>
+        {children}
+      </p>
+    );
+  },
   a: (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
     <a className="text-senal hover:text-senal/80 underline underline-offset-2 transition-colors" {...props} />
   ),
+  img: MdxImage,
   ul: (props: React.HTMLAttributes<HTMLUListElement>) => (
     <ul className="list-disc pl-6 mb-6 flex flex-col gap-2 font-dm text-[17px] font-light leading-[1.8] text-crema/85 marker:text-senal" {...props} />
   ),
