@@ -25,19 +25,19 @@ export default function EscuchasInmersivas() {
             <div className="bg-medianoche border-t-2 border-senal p-6 md:p-8 text-center h-full flex flex-col">
               <div className="relative mb-6">
                 <Image
-                  src="/escuchas-inmersivas-dark-side-14-noviembre.png"
+                  src="/escuchas-inmersivas-the-dark-side-14-noviembre.png"
                   width={1080}
                   height={1350}
                   sizes="(min-width: 640px) 320px, 90vw"
                   className="w-full h-auto"
-                  alt="Dark Side of the Moon · Pink Floyd · Escuchas Inmersivas en Estudio Serena, sábado 14 de noviembre"
+                  alt="The Dark Side of the Moon · Pink Floyd · Escuchas Inmersivas en Estudio Serena, sábado 14 de noviembre"
                 />
                 <span className="absolute top-3 right-3 bg-abismo/90 border border-senal text-senal font-mono text-[11px] tracking-[0.14em] px-3 py-1">
                   AGOTADO
                 </span>
               </div>
               <h3 className="font-syne text-lg md:text-xl lg:text-sm font-extrabold text-crema leading-tight mb-2">
-                Dark Side of the Moon
+                The Dark Side of the Moon
               </h3>
               <p className="font-mono text-[11px] tracking-[0.12em] text-senal mb-6">
                 Pink Floyd · Dolby Atmos
