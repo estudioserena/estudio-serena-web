@@ -100,7 +100,7 @@ export default function PrivadasReserva() {
             Sala completa para 6 personas, con el disco que tú elijas en Dolby Atmos 7.1.4.
           </p>
           <p className="font-mono text-[13px] tracking-[0.12em] text-senal text-center mb-12">
-            {clp(PRECIO)} la sala completa
+            {clp(PRECIO)} la sesión (máximo 6 personas)
           </p>
         </FadeUp>
 
@@ -152,7 +152,7 @@ export default function PrivadasReserva() {
                             : "border-crema/[0.06] bg-medianoche/40 text-crema/35 cursor-not-allowed"
                       }`}
                     >
-                      <span className="block capitalize">{s.etiqueta}</span>
+                      <span className="block first-letter:uppercase">{s.etiqueta}</span>
                       <span className="block font-mono text-[11px] tracking-[0.1em] mt-1 text-senal/80">
                         {ETIQUETA_ESTADO[s.estado].toUpperCase()}
                       </span>
