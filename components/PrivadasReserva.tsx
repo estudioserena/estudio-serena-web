@@ -89,7 +89,7 @@ export default function PrivadasReserva() {
       <div className="max-w-3xl mx-auto px-6 lg:px-16 py-20">
         <FadeUp>
           <p className="font-mono text-sm tracking-widest text-senal font-medium mb-4 text-center">
-            ESCUCHA PRIVADA
+            SESIONES PRIVADAS
           </p>
           <h2 className="font-syne text-3xl md:text-4xl font-bold text-crema leading-tight text-center mb-6">
             Elige un disco, suma 6 personas
