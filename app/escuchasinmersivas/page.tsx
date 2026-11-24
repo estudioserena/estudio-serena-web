@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import EscuchasInmersivas from "@/components/EscuchasInmersivas";
+import PrivadasReserva from "@/components/PrivadasReserva";
 
 export const metadata: Metadata = {
   title: "Escuchas Inmersivas — Estudio Serena | Dolby Atmos",
@@ -23,6 +24,7 @@ export default function EscuchasInmersivasPage() {
     <>
       <Nav />
       <EscuchasInmersivas />
+      <PrivadasReserva />
       <Footer />
     </>
   );
